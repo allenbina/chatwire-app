@@ -1,0 +1,343 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Customized for chatwire — chatwire.app
+-->
+<html>
+	<head>
+		<title>chatwire — Your messages, your server, your rules.</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Open-source iMessage bridge. Access your messages from any device — your phone, your laptop, your browser. One command to install, zero servers to manage." />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/chatwire.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<a href="index.html" class="logo"><strong>chatwire</strong> <span>open-source iMessage bridge</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="https://github.com/allenbina/chatwire">GitHub</a></li>
+							<li><a href="https://github.com/allenbina/chatwire/blob/main/docs/OPEN_SOURCE_PLAN.md">Docs</a></li>
+							<li><a href="https://github.com/allenbina/chatwire/issues">Issues</a></li>
+						</ul>
+						<ul class="actions stacked">
+							<li><a href="#install" class="button primary fit scrolly">Install</a></li>
+							<li><a href="https://github.com/allenbina/chatwire" class="button fit">View on GitHub</a></li>
+						</ul>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner" class="major">
+						<div class="inner">
+							<header class="major">
+								<h1>chatwire</h1>
+							</header>
+							<div class="content">
+								<p><strong>Your messages, your server, your rules.</strong><br />
+								Open-source iMessage bridge. Access your messages from any device — your phone, your laptop, your browser. One command to install, zero servers to manage.</p>
+								<div class="install-hero">
+									<code class="install-cmd">pipx install chatwire</code>
+								</div>
+								<ul class="actions">
+									<li><a href="#one" class="button next scrolly">See what it does</a></li>
+									<li><a href="#install" class="button primary scrolly">Install now</a></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Feature Tiles -->
+							<section id="one" class="tiles">
+								<article>
+									<span class="image">
+										<img src="images/pic01.jpg" alt="chatwire Web UI" />
+									</span>
+									<header class="major">
+										<h3><a href="#" class="link">Web UI</a></h3>
+										<p>A full React interface for reading and sending iMessages. 23 themes, full-text search, attachments, group chats, tapback reactions, and read receipts — everything you'd expect from a modern chat app. Installable as a PWA on desktop and mobile.</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/pic02.jpg" alt="Telegram Relay" />
+									</span>
+									<header class="major">
+										<h3><a href="#" class="link">Telegram Relay</a></h3>
+										<p>Reply to your iMessages from Telegram. Full two-way bridge with contact names, group support, and delivery confirmation. Your iMessages and Telegram messages stay in sync — reply from whichever app you have open.</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/pic03.jpg" alt="Plugin System" />
+									</span>
+									<header class="major">
+										<h3><a href="#" class="link">Plugin System</a></h3>
+										<p>Extend chatwire with ntfy push notifications, MQTT, Home Assistant, XMPP, and more. Every plugin gets an auto-generated settings section in the web UI. Or build your own — the SDK is open and community plugins are welcome.</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/pic04.jpg" alt="Automation Rules" />
+									</span>
+									<header class="major">
+										<h3><a href="#" class="link">Automation Rules</a></h3>
+										<p>A condition/action rules engine fires on every message. Write rules in a human-readable DSL: <code>from:Alice AND contains:urgent</code>. Actions include webhook, suppress, log, and auto-reply. Rules live in a JSON file and are fully editable from the Settings UI.</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/pic05.jpg" alt="MCP Integration" />
+									</span>
+									<header class="major">
+										<h3><a href="#" class="link">MCP Integration</a></h3>
+										<p>Connect AI agents to your messages. 10 tools, 4 permission scopes, and a confirmation flow that keeps you in control. Claude, ChatGPT, and local LLMs supported. The protocol is open — build your own MCP client or use any compatible one.</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="images/pic06.jpg" alt="Zero Telemetry" />
+									</span>
+									<header class="major">
+										<h3><a href="#" class="link">Zero Telemetry</a></h3>
+										<p>No analytics. No crash reporting. No "anonymized usage data." Your messages stay on your Mac. We don't know how many users we have, and we're fine with that. If you want to help us improve, open an issue on GitHub.</p>
+									</header>
+								</article>
+							</section>
+
+						<!-- How It Works -->
+							<section id="how-it-works">
+								<div class="inner">
+									<header class="major">
+										<h2>How it works</h2>
+									</header>
+									<div class="how-steps">
+										<div class="how-step">
+											<span class="step-num">1</span>
+											<div class="step-body">
+												<h3>Install on your Mac</h3>
+												<p>Run <code>pipx install chatwire</code>. The setup wizard walks you through granting Full Disk Access and Automation permissions — two macOS prompts, nothing more. Runs on macOS 12 Monterey and up.</p>
+											</div>
+										</div>
+										<div class="how-step">
+											<span class="step-num">2</span>
+											<div class="step-body">
+												<h3>Your Mac reads chat.db</h3>
+												<p>chatwire watches <code>~/Library/Messages/chat.db</code> with your explicit permission. It resolves senders against Contacts.app and drives Messages.app via AppleScript to send on your behalf. No protocol reverse-engineering. No Apple gray area.</p>
+											</div>
+										</div>
+										<div class="how-step">
+											<span class="step-num">3</span>
+											<div class="step-body">
+												<h3>Access from anywhere</h3>
+												<p>Browser, phone, Telegram, AI agent — connect from any device. Your messages never touch our servers, because we don't have any. Local network, Tailscale, or Cloudflare Access: you control the perimeter.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+
+						<!-- Install -->
+							<section id="install">
+								<div class="inner">
+									<header class="major">
+										<h2>Install</h2>
+									</header>
+									<p>chatwire runs on macOS 12 Monterey and later. You need a Mac with your Apple ID logged into Messages.app. Run <code>chatwire doctor</code> to verify your system is ready.</p>
+									<div class="install-methods">
+										<div class="install-method">
+											<h3>Recommended — pipx</h3>
+											<p>pipx installs chatwire into an isolated environment so it never conflicts with your other Python tools.</p>
+											<pre><code>pipx install chatwire
+chatwire install-agents
+chatwire setup</code></pre>
+										</div>
+										<div class="install-method">
+											<h3>Homebrew</h3>
+											<p>Convenient if you already use brew. Tap source at <a href="https://github.com/allenbina/homebrew-tap">allenbina/homebrew-tap</a>.</p>
+											<pre><code>brew install allenbina/tap/chatwire
+chatwire install-agents
+chatwire setup</code></pre>
+										</div>
+										<div class="install-method">
+											<h3>curl (no package manager)</h3>
+											<p>No PyPI access, no Homebrew — just a shell. Pin to a specific version with <code>CHATWIRE_REF=v1.1.0</code>.</p>
+											<pre><code>curl -fsSL https://raw.githubusercontent.com/allenbina/chatwire/main/scripts/install.sh | bash</code></pre>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><a href="https://github.com/allenbina/chatwire" class="button next">Full install docs on GitHub</a></li>
+									</ul>
+								</div>
+							</section>
+
+						<!-- Comparison -->
+							<section id="comparison">
+								<div class="inner">
+									<header class="major">
+										<h2>How chatwire compares</h2>
+									</header>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th></th>
+													<th>chatwire</th>
+													<th>BlueBubbles</th>
+													<th>AirMessage</th>
+													<th>Beeper</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><strong>Install</strong></td>
+													<td><code>pipx install chatwire</code></td>
+													<td>Multi-step + Firebase + Google Cloud</td>
+													<td>.DMG download + setup</td>
+													<td>Sign up + download</td>
+												</tr>
+												<tr>
+													<td><strong>Cost</strong></td>
+													<td>Free, forever</td>
+													<td>Free</td>
+													<td>Free</td>
+													<td>$10/month</td>
+												</tr>
+												<tr>
+													<td><strong>Self-hosted</strong></td>
+													<td>Yes, your Mac</td>
+													<td>Yes, your Mac/Windows</td>
+													<td>Yes, your Mac</td>
+													<td>No — their servers</td>
+												</tr>
+												<tr>
+													<td><strong>Web UI</strong></td>
+													<td>React, 23 themes</td>
+													<td>Yes</td>
+													<td>Basic</td>
+													<td>Yes</td>
+												</tr>
+												<tr>
+													<td><strong>Plugins</strong></td>
+													<td>Open SDK</td>
+													<td>No</td>
+													<td>No</td>
+													<td>No</td>
+												</tr>
+												<tr>
+													<td><strong>Telemetry</strong></td>
+													<td>Zero</td>
+													<td>Optional</td>
+													<td>Unknown</td>
+													<td>Yes</td>
+												</tr>
+												<tr>
+													<td><strong>Open source</strong></td>
+													<td>Yes</td>
+													<td>Yes</td>
+													<td>Partial</td>
+													<td>No</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</section>
+
+						<!-- Values -->
+							<section id="values">
+								<div class="inner">
+									<header class="major">
+										<h2>What we chose, and what we didn't</h2>
+									</header>
+									<div class="values-grid">
+										<div class="value-item">
+											<h3>Bridges to open platforms</h3>
+											<p>We connect to Telegram (open API), Matrix (open protocol), and XMPP (open standard). We don't connect to platforms that prohibit third-party access in their Terms of Service. This isn't a technical limitation — it's a choice.</p>
+										</div>
+										<div class="value-item">
+											<h3>Every message is human-triggered</h3>
+											<p>We don't offer message scheduling. We don't offer auto-replies. We don't offer "AI that texts for you." Texting is personal. If you're not present enough to send a message yourself, maybe the message doesn't need to be sent.</p>
+										</div>
+										<div class="value-item">
+											<h3>Zero telemetry. Not "anonymized." Zero.</h3>
+											<p>chatwire doesn't phone home. No analytics, no crash reporting, no usage data. Your messages stay on your Mac. Your reading habits stay on your Mac. We don't know how many users we have, and we're fine with that.</p>
+										</div>
+										<div class="value-item">
+											<h3>Plugins are a choice, not a mandate</h3>
+											<p>The core app — reading and sending your messages — works with zero plugins installed. We built the plugin system so you can extend chatwire how you want. Not so we can upsell you. Not so we can build a marketplace that takes a cut.</p>
+										</div>
+										<div class="value-item">
+											<h3>Self-hosted means self-owned</h3>
+											<p>Your chatwire instance runs on your Mac. Your messages never touch our servers — because we don't have servers. There's no cloud component. There's no account to create. There's no subscription. If we disappear tomorrow, your instance keeps running.</p>
+										</div>
+									</div>
+								</div>
+							</section>
+
+						<!-- The Story -->
+							<section id="story">
+								<div class="inner">
+									<header class="major">
+										<h2>The story nobody else has</h2>
+									</header>
+									<p>Chatwire's development — from proof of concept to production — was built through an autonomous AI development loop. Eight phases, 48 commits, full plugin SDK, mobile app scaffold, CI/CD pipeline — built in a single afternoon. The developer approved each phase from his phone while running errands.</p>
+									<p>This isn't a gimmick. It's a proof of what's possible when you combine clear architectural decisions with autonomous AI execution. The human set the direction, made the judgment calls, and rejected the ideas that didn't align with the project's values: no message scheduling, no WhatsApp bridge, no telemetry. The AI wrote the code.</p>
+									<p>The entire development history is public. Every commit, every decision, every "no" — it's all in the repo.</p>
+									<ul class="actions">
+										<li><a href="https://github.com/allenbina/chatwire/commits/main" class="button">View the commit history</a></li>
+									</ul>
+								</div>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="https://github.com/allenbina/chatwire" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; chatwire contributors</li>
+								<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+								<li><a href="https://github.com/allenbina/chatwire">GitHub</a></li>
+								<li><a href="https://github.com/allenbina/chatwire/blob/main/docs/OPEN_SOURCE_PLAN.md">Docs</a></li>
+								<li><a href="#">Privacy</a></li>
+								<li><a href="mailto:chatwireapp@gmail.com">chatwireapp@gmail.com</a></li>
+							</ul>
+							<p class="trademark-note">iMessage, Messages, macOS, and AppleScript are trademarks of Apple Inc. chatwire is not affiliated with, endorsed by, or sponsored by Apple Inc.</p>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

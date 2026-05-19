@@ -1,0 +1,293 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'chatwire — open-source iMessage bridge for macOS',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero -->
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Install',
+        href: '#install',
+        icon: 'tabler:download',
+      },
+      { text: 'Documentation', href: 'https://docs.chatwire.app', target: '_blank' },
+      { text: 'GitHub', href: 'https://github.com/allenbina/chatwire', target: '_blank', icon: 'tabler:brand-github' },
+    ]}
+  >
+    <Fragment slot="title">
+      <span class="text-accent dark:text-[rgb(127,150,166)]">chatwire</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Open-source iMessage bridge for macOS. Access your messages from any device — your phone, your laptop, your browser. One command to install, zero servers to manage.
+    </Fragment>
+  </Hero>
+
+  <!-- Install command -->
+  <Note title="Install:" description="pipx install chatwire && chatwire setup" icon="tabler:terminal-2" />
+
+  <!-- What it does -->
+  <Features
+    id="features"
+    tagline="Features"
+    title="What chatwire does"
+    subtitle="A bridge between your Mac's Messages app and everything else. No cloud, no accounts, no servers to rent."
+    items={[
+      {
+        title: 'Web UI',
+        description:
+          'A full React interface for reading and sending iMessages. 23 themes, full-text search, attachments, group chats, tapback reactions, and read receipts. Installable as a PWA.',
+        icon: 'tabler:browser',
+      },
+      {
+        title: 'Telegram relay',
+        description:
+          'Reply to your iMessages from Telegram. Full two-way bridge with contact names, group support, and delivery confirmation.',
+        icon: 'tabler:brand-telegram',
+      },
+      {
+        title: 'Plugin system',
+        description:
+          'Extend with ntfy push notifications, MQTT, Home Assistant, XMPP, and more. Every plugin gets an auto-generated settings section. Or build your own — the SDK is open.',
+        icon: 'tabler:puzzle',
+      },
+      {
+        title: 'Automation rules',
+        description:
+          'A condition/action rules engine fires on every message. Write rules in a human-readable DSL: from:Alice AND contains:urgent. Actions include webhook, suppress, log, and auto-reply.',
+        icon: 'tabler:robot',
+      },
+      {
+        title: 'MCP integration',
+        description:
+          'Connect AI agents to your messages. 10 tools, 4 permission scopes, and a confirmation flow that keeps you in control. Claude, ChatGPT, and local LLMs supported.',
+        icon: 'tabler:cpu',
+      },
+      {
+        title: 'Zero telemetry',
+        description:
+          "No analytics. No crash reporting. No \"anonymized usage data.\" Your messages stay on your Mac. We don't know how many users we have, and we're fine with that.",
+        icon: 'tabler:shield-lock',
+      },
+    ]}
+  />
+
+  <!-- How it works -->
+  <Steps
+    title="How it works"
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Install on your Mac</span>',
+        description:
+          'Run pipx install chatwire. The setup wizard walks you through granting Full Disk Access and Automation permissions — two macOS prompts, nothing more. Runs on macOS 12 Monterey and up.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Your Mac reads chat.db</span>',
+        description:
+          'chatwire watches ~/Library/Messages/chat.db with your explicit permission. It resolves senders against Contacts.app and drives Messages.app via AppleScript to send on your behalf. No protocol reverse-engineering.',
+        icon: 'tabler:database',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Access from anywhere</span>',
+        description:
+          "Browser, phone, Telegram, AI agent — connect from any device. Your messages never touch our servers, because we don't have any. Local network, Tailscale, or Cloudflare Access — you control the perimeter.",
+        icon: 'tabler:world',
+      },
+      {
+        title: 'Done!',
+        icon: 'tabler:check',
+      },
+    ]}
+  />
+
+  <!-- How it compares -->
+  <Content
+    id="comparison"
+    isReversed
+    tagline="Comparison"
+    title="How chatwire compares"
+    items={[
+      {
+        title: 'vs BlueBubbles',
+        description: 'BlueBubbles requires Firebase + Google Cloud setup. chatwire is one command.',
+      },
+      {
+        title: 'vs AirMessage',
+        description: 'AirMessage is partially open source with a basic web UI. chatwire is fully open with 23 themes and a plugin system.',
+      },
+      {
+        title: 'vs Beeper',
+        description: "Beeper routes through their servers at $10/month. chatwire is free, self-hosted, and your messages never leave your Mac.",
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Free. Self-hosted. Open source.</h3>
+      Zero telemetry, zero accounts, zero subscriptions. If we disappear tomorrow, your instance keeps running.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Install methods -->
+  <Content
+    id="install"
+    isAfterContent
+    tagline="Install"
+    title="Three ways to install"
+    items={[
+      {
+        title: 'pipx (recommended)',
+        description: 'Isolated environment, clean upgrades. pipx install chatwire && chatwire setup',
+      },
+      {
+        title: 'Homebrew',
+        description: 'brew install allenbina/tap/chatwire — convenient if you already use brew.',
+      },
+      {
+        title: 'curl (no package manager)',
+        description: 'curl -fsSL https://raw.githubusercontent.com/allenbina/chatwire/main/scripts/install.sh | bash',
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      All methods converge on the same post-install steps: <code>chatwire install-agents</code>, then <code>chatwire setup</code>. Run <code>chatwire doctor</code> to verify.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Values -->
+  <Features
+    id="values"
+    tagline="Values"
+    title="What we chose, and what we didn't"
+    items={[
+      {
+        title: 'Bridges to open platforms',
+        description:
+          "We connect to Telegram (open API), Matrix (open protocol), and XMPP (open standard). We don't connect to platforms that prohibit third-party access in their ToS.",
+        icon: 'tabler:arrows-split-2',
+      },
+      {
+        title: 'Self-hosted means self-owned',
+        description:
+          "Your chatwire instance runs on your Mac. Your messages never touch our servers — because we don't have servers. There's no cloud component, no account, no subscription.",
+        icon: 'tabler:home',
+      },
+      {
+        title: 'Plugins are a choice, not a mandate',
+        description:
+          'The core app works with zero plugins installed. The plugin system exists so you can extend chatwire how you want. Not so we can upsell you.',
+        icon: 'tabler:plug',
+      },
+      {
+        title: 'No tagline',
+        description:
+          "There's no tagline. It's just an open tool. It's MIT licensed, so you can repackage it and give it whatever tagline you want.",
+        icon: 'tabler:tag-off',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-transparent"></div>
+    </Fragment>
+  </Features>
+
+  <!-- Stats -->
+  <Stats
+    stats={[
+      { title: 'Themes', amount: '23' },
+      { title: 'Plugins', amount: '11' },
+      { title: 'MCP tools', amount: '10' },
+      { title: 'Telemetry', amount: '0' },
+    ]}
+  />
+
+  <!-- FAQ -->
+  <FAQs
+    title="Frequently asked questions"
+    tagline="FAQ"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Do I need a Mac running 24/7?',
+        description:
+          'Yes — chatwire reads chat.db and drives Messages.app, both of which require a running Mac. A Mac mini or any always-on Mac works. When your Mac sleeps, the bridge pauses and resumes when it wakes.',
+      },
+      {
+        title: 'Is this safe? Will Apple ban my account?',
+        description:
+          "chatwire reads a local SQLite database and sends messages via AppleScript — the same mechanism macOS Shortcuts uses. There's no protocol reverse-engineering, no jailbreaking, no Apple gray area.",
+      },
+      {
+        title: 'Can I use it from my Android phone?',
+        description:
+          'Yes. The web UI is a PWA — install it to your home screen from any browser. Or use the Telegram relay to get iMessages in Telegram. A React Native app is also in development.',
+      },
+      {
+        title: 'What happens to my messages if chatwire goes away?',
+        description:
+          "Nothing. Your messages are in Apple's Messages app and chat.db — chatwire only reads them. If you uninstall chatwire, everything is exactly where it was.",
+      },
+      {
+        title: 'Is there a hosted version?',
+        description:
+          "No, and there won't be. Hosting means routing your messages through someone else's servers. That's the opposite of what chatwire is for.",
+      },
+      {
+        title: 'How do I expose it outside my home network?',
+        description:
+          'Tailscale (easiest), Cloudflare Access, or a reverse proxy with authentication. chatwire has built-in password auth and API key scoping. See the docs for setup guides.',
+      },
+    ]}
+  />
+
+  <!-- CTA -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Read the docs',
+        href: 'https://docs.chatwire.app',
+        target: '_blank',
+        icon: 'tabler:book',
+      },
+      {
+        text: 'View on GitHub',
+        href: 'https://github.com/allenbina/chatwire',
+        target: '_blank',
+        icon: 'tabler:brand-github',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      pipx install chatwire
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      MIT licensed. Free forever.
+    </Fragment>
+  </CallToAction>
+</Layout>

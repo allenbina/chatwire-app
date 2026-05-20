@@ -10,6 +10,9 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
+import architectureImage from '~/assets/images/chatwire-architecture.png';
+import dataflowImage from '~/assets/images/chatwire-dataflow.png';
+
 const metadata = {
   title: 'chatwire — open-source iMessage bridge for macOS',
   ignoreTitleTemplate: true,
@@ -29,6 +32,10 @@ const metadata = {
       { text: 'Documentation', href: 'https://docs.chatwire.app', target: '_blank' },
       { text: 'GitHub', href: 'https://github.com/allenbina/chatwire', target: '_blank', icon: 'tabler:brand-github' },
     ]}
+    image={{
+      src: architectureImage,
+      alt: 'chatwire architecture — Messages to Web UI, Plugins, HTTP/MQTT, and MCP',
+    }}
   >
     <Fragment slot="title">
       <span class="text-accent dark:text-[rgb(127,150,166)]">chatwire</span>
@@ -91,6 +98,10 @@ const metadata = {
   <!-- How it works -->
   <Steps
     title="How it works"
+    image={{
+      src: dataflowImage,
+      alt: 'chatwire data flow — messages.app and chat.db through AppleScript to chatwire, 100% local',
+    }}
     items={[
       {
         title: 'Step 1: <span class="font-medium">Install on your Mac</span>',
